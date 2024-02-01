@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
         button = findViewById(R.id.removeButton)
         textView = findViewById(R.id.titleTextView)
 
-        button.setOnClickListener{
+        button.setOnClickListener {
             state = State.Removed
             state.apply(linearLayout, textView, button)
         }
@@ -59,7 +59,7 @@ interface State : Serializable {
 
         override fun apply(linearLayout: LinearLayout, textView: TextView, button: Button) = Unit
 
-        }
+    }
 
     object Removed : State {
 
